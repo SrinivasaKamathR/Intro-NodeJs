@@ -25,6 +25,7 @@ const requestHandler = (req, res) => {
       console.log(message);
       fs.writeFileSync("message.txt", message);
     });
+
     fs.writeFileSync("hello.txt", "DUMMY");
     res.statusCode = 302;
     res.setHeader("Location", "/");
